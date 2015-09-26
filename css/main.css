@@ -194,4 +194,79 @@ a.green-btn:hover,a.green-btn:focus {
 }
 .activities .reg-btn {
     float: right;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
+.activities .clearfix {
+    margin-bottom: 10px;
+}
+.activity {
+    background: #3c3c3c;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.activity>.type-game {
+    background: #e598b5;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-right: 20px;
+    float: left;
+}
+.activity>.type-url {
+    background: #6ae574;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-right: 20px;
+    float: left;
+}
+.activity>a {
+    color: white;
+    font-size: 16px;
+}
+.activity>.set {
+    float: right;
+    background: #99c45a;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    padding-top: 10px;
+    line-height: 20px;
+}
+.activity span {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.activity>.remains {
+    float: right;
+    background: #b2d179;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    padding-top: 10px;
+    line-height: 20px;
+}
+.activity span {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
