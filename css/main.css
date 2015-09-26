@@ -189,4 +189,5 @@ a.green-btn:hover,a.green-btn:focus {
 }
 .activities .caption {
     font-weight: 100;
+    text-transform: uppercase;
 }
