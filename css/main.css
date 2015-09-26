@@ -1,0 +1,154 @@
+.header {
+    height: 70px;
+    background: #fff;
+}
+a.logo {
+    line-height: 70px;
+}
+.login-links {
+    float: right;
+    line-height: 70px;
+    text-align: right;
+}
+.login-links>span {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.login-links>.login-link {
+    font-size: 14px;
+    color: #19b698;
+}
+.reg-btn {
+    background: #f56e69;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 30px;
+    border-radius: 3px;
+}
+.reg-btn:hover, .reg-btn:focus {
+    text-decoration: none;
+    color: #fff;
+    background: #19b698;
+}
+.picture {
+    background: url("../img/bg.jpg") center no-repeat;
+    background-size: cover;
+    height: 330px;
+    width: 100%;
+    font-size: 48px;
+}
+.picture>.row{
+    background-color: rgba(0,0,0,0.78);
+    height: 100%;
+}
+.picture h1 {
+    letter-spacing: 5px;
+    font-weight: 100;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 60px;
+    margin-top: 40px;
+    margin-bottom: -10px;
+}
+a.green-btn {
+    background: #19b698;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 15px 70px;
+    border-radius: 3px;
+}
+a.green-btn:hover,a.green-btn:focus {
+    text-decoration: none;
+    background: #f56e69;
+}
+
+.how .caption {
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.block {
+    width: 200px;
+    margin:0 auto 20px auto;
+    text-align: center;
+    font-size:18px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.block img {
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+    .picture {
+        font-size: 30px;
+    }
+    .picture h1 {
+        line-height: 40px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .login-links>span {
+        display: none;
+    }
+}
+.main-footer {
+    background: #000;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    width: 100%;
+}
+.main-footer .caption {
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0 auto 20px auto;
+}
+.regform {
+    margin: 0 auto;
+    width: 300px;
+}
+.regform>input[type=text] {
+    height: 30px;
+    width: 300px;
+    background: none;
+    border: 1px white solid;
+    margin-bottom: 10px;
+    color: #fff;
+    padding: 3px;
+}
+.regform>input[type=submit] {
+    background: #19b698;
+    border: none;
+    color: white;
+    width: 300px;
+    height: 30px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.login-form {
+    background: #fff;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 999;
+    display: none;
+}
+.fade {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    z-index: 998;
+    display: none;
+}
