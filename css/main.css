@@ -187,3 +187,6 @@ a.green-btn:hover,a.green-btn:focus {
     opacity: 0;
     display: none;
 }
+.activities .caption {
+    font-weight: 100;
+}
