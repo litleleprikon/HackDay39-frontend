@@ -13,12 +13,12 @@ a.logo {
     text-align: right;
 }
 
-.login-links > span {
+.login-links>span {
     font-size: 10px;
     text-transform: uppercase;
 }
 
-.login-links > .login-link {
+.login-links>.login-link {
     font-size: 14px;
     color: #19b698;
 }
@@ -45,7 +45,7 @@ a.logo {
     font-size: 48px;
 }
 
-.picture > .row {
+.picture>.row {
     background-color: rgba(0, 0, 0, 0.78);
     height: 100%;
 }
@@ -107,7 +107,7 @@ a.green-btn:hover, a.green-btn:focus {
         margin-bottom: 10px;
     }
 
-    .login-links > span {
+    .login-links>span {
         display: none;
     }
 
@@ -115,7 +115,7 @@ a.green-btn:hover, a.green-btn:focus {
         display: none;
     }
 
-    .gifts > .clearfix > .yellow {
+    .gifts>.clearfix>.yellow {
         display: none;
     }
 }
@@ -142,7 +142,7 @@ a.green-btn:hover, a.green-btn:focus {
     width: 300px;
 }
 
-.regform > input[type=text] {
+.regform>input[type=text] {
     height: 30px;
     width: 300px;
     background: none;
@@ -152,7 +152,7 @@ a.green-btn:hover, a.green-btn:focus {
     padding: 3px;
 }
 
-.regform > input[type=submit] {
+.regform>input[type=submit] {
     background: #19b698;
     border: none;
     color: white;
@@ -177,11 +177,11 @@ a.green-btn:hover, a.green-btn:focus {
     padding: 30px;
 }
 
-.form > form {
+.form>form {
     margin-top: 10px;
 }
 
-.form > form > input[type=text] {
+.form>form>input[type=text] {
     width: 240px;
     height: 30px;
     border: none;
@@ -191,11 +191,11 @@ a.green-btn:hover, a.green-btn:focus {
     text-align: center;
 }
 
-.form > form > input[type=text]:focus {
+.form>form>input[type=text]:focus {
     border-bottom: #19b698 1px solid;
 }
 
-.form > form > input[type=submit] {
+.form>form>input[type=submit] {
     background: #19b698;
     border: none;
     color: white;
@@ -208,7 +208,7 @@ a.green-btn:hover, a.green-btn:focus {
     font-weight: 100;
 }
 
-.form > form > input[type=submit]:hover, .login-form > form > input[type=submit]:focus {
+.form>form>input[type=submit]:hover, .login-form>form>input[type=submit]:focus {
     background: #f56e69;
 }
 
@@ -248,7 +248,7 @@ a.green-btn:hover, a.green-btn:focus {
     text-transform: uppercase;
 }
 
-.activity > .type-game {
+.activity>.type-game {
     background: #0e669b;
     color: #fff;
     font-size: 14px;
@@ -263,7 +263,7 @@ a.green-btn:hover, a.green-btn:focus {
     float: left;
 }
 
-.activity > .type-link {
+.activity>.type-link {
     background: #444395;
     color: #fff;
     font-size: 14px;
@@ -278,12 +278,12 @@ a.green-btn:hover, a.green-btn:focus {
     float: left;
 }
 
-.activity > span {
+.activity>span {
     color: white;
     font-size: 16px;
 }
 
-.activity > .set {
+.activity>.set {
     float: right;
     background: #99c45a;
     width: 60px;
@@ -300,7 +300,7 @@ a.green-btn:hover, a.green-btn:focus {
     font-size: 10px;
 }
 
-.activity > .remains {
+.activity>.remains {
     float: right;
     background: #b2d179;
     width: 60px;
@@ -325,7 +325,7 @@ a.green-btn:hover, a.green-btn:focus {
     margin-left: 5px;
 }
 
-.gifts > .clearfix {
+.gifts>.clearfix {
     margin-bottom: 10px;
 }
 
@@ -340,7 +340,7 @@ a.green-btn:hover, a.green-btn:focus {
     text-transform: uppercase;
 }
 
-.gift-title > .type-steam {
+.gift-title>.type-steam {
     background: #444395;
     color: #fff;
     font-size: 14px;
@@ -355,12 +355,12 @@ a.green-btn:hover, a.green-btn:focus {
     float: left;
 }
 
-.gift-title > span {
+.gift-title>span {
     color: white;
     font-size: 16px;
 }
 
-.gift-title > .key {
+.gift-title>.key {
     float: right;
     background: #99c45a;
     width: 60px;
@@ -372,7 +372,7 @@ a.green-btn:hover, a.green-btn:focus {
     line-height: 30px;
 }
 
-.key > a {
+.key>a {
     color: #fff;
 }
 
