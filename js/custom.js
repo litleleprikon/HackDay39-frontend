@@ -24,3 +24,7 @@ function showAddLink() {
     $(".fade").css("opacity","1");
     $(".add-link-form").css("display", "block");
 };
+
+function isAuth() {
+    return document.cookie!=null;
+}
