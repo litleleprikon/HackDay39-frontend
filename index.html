@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="doToApp">
 
 <head>
 
@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Eugene, Emil, Darina, Semen">
-
-    <title>ToDo</title>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular-route/angular-route.js"></script>
+    <script type="application/javascript" src="js/app.js"></script>
+    <title>DoTo</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,66 +27,26 @@
 </head>
 
 <body>
-    <div class="fade" onclick="closeLogin()"></div>
+    <div class="fade" onclick="closeForm()"></div>
     <!-- Navigation -->
     <nav class="header" role="navigation">
         <div class="container">
             <div class="col-md-12">
                 <a href="/" class="logo"><img src="img/logo.png" alt="ToDo"></a>
-                <div class="login-links">
-                    <a href="#" onclick="showLogin()" class="login-link">Sign In</a> <span>OR</span> <a href="#register" class="reg-btn">Register</a>
+                <div class="login-links" ng-hide="document.cookie!=''">
+                    <a href="" onclick="showLogin()" class="login-link">Sign In</a> <span>OR</span> <a href="#register" class="reg-btn">Register</a>
+                </div>
+                <div class="login-links" ng-show="document.cookie!=''" ng-controller="mainCtrl">
+                    <a href="" onclick="logout()" class="reg-btn">Log Out</a>
                 </div>
             </div>
         </div>
         <!-- /.container -->
     </nav>
 
-    <!-- Page Content -->
-    <div class="container picture">
-        <div class="row">
-            <div class="text-center">
-                <h1>Your child<br>doesn't spend<br>time properly?</h1>
-                <a href="#how" class="green-btn">We will change it!</a>
-            </div>
-        </div>
-        <!-- /.row -->
+    <div class="ng-view">
+
     </div>
-    <!-- /.container -->
-
-    <div class="container how" id="how">
-        <div class="row">
-            <h2 class="caption">How it works?</h2>
-            <div class="col-md-4">
-                <div class="block">
-                    <img src="img/icon-money.png" alt="Place your bid"><br>
-                    Choose a gift for your child
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="block">
-                    <img src="img/icon-time.png" alt="Set time"><br>
-                    Set allowed time to child
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="block">
-                    <img src="img/icon-deadline.png" alt="You may loose money"><br>
-                    If your kid spend less time to entertainment, we will give him a gift
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="container main-footer" id="register">
-        <div class="row">
-            <h2 class="caption">Make your kid better <br> now</h2>
-
-            <form action="/reg" class="regform">
-                <input type="text" placeholder="Enter your E-Mail">
-                <input type="submit" value="Sign Up">
-            </form>
-        </div>
-    </footer>
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
@@ -92,16 +54,34 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
-    <div class="login-form">
+    <div class="login-form form">
         <h2>Sign In</h2>
 
-        <form action="/auth">
-            <input type="text" placeholder="E-Mail">
-            <input type="text" placeholder="Password">
+        <form action="" ng-controller="mainCtrl" ng-submit="login()">
+            <input type="text" ng-model="user.username" placeholder="Username">
+            <input type="text" ng-model="user.password" placeholder="Password">
             <input type="submit" value="Sign In">
         </form>
     </div>
-
+    <div class="add-link-form form">
+        <h2>Add link</h2>
+        <form action="" ng-controller="mainCtrl" ng-submit="addLink()">
+            <input type="hidden" ng-model="user.type" value="url">
+            <input type="text" ng-model="user.url" placeholder="URL">
+            <input type="text" ng-model="user.minutes" placeholder="Minutes">
+            <input type="submit" value="Add">
+        </form>
+    </div>
+    <div class="add-game-form form">
+        <h2>Add game</h2>
+        <form action="" ng-controller="mainCtrl" ng-submit="addGame()">
+            <input type="hidden" ng-model="user.type" value="game">
+            <input type="text" ng-model="user.name" placeholder="Name">
+            <input type="text" ng-model="user.minutes" placeholder="Minutes">
+            <input type="submit" value="Add">
+        </form>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </body>
 
 </html>

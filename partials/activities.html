@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="row activities">
+            <div class="clearfix">
+                <h2 class="caption">Activities</h2>
+                <a href="" onclick="showAddLink()" class="reg-btn add">Add link</a>
+                <a href="" onclick="showAddGame()" class="reg-btn add">Add game</a>
+            </div>
+            <div ng-repeat="activity in activities">
+                <div class="activity">
+                    <div class="type-{{activity.type}}">
+                        {{activity.type}}
+                    </div>
+                    <span>{{activity.link}}</span>
+                    <div class="remains">{{activity.gone_time}}<br><span>remains</span></div>
+                    <div class="set">{{activivty.limit}}<br><span>set</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="row gifts">
+            <div class="clearfix">
+                <h2 class="caption">gifts</h2>
+            </div>
+                <div class="gift">
+                    <div class="gift-title clearfix">
+                        <div class="type-steam">
+                            Steam
+                        </div>
+                        <span>Half-Life 3</span>
+                    </div>
+                    <div class="gift-description">
+                        Key: XNSS-HSJW-3NGU-8XTJ
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<!-- Page Content -->
