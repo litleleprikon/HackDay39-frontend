@@ -51,6 +51,12 @@ doToApp.controller('activitiesCtrl', function ($scope, $http) {
     $http.get('http://doto.work/api/todo/activities').success(function (data) {
         $scope.activities = data;
     });
+    //$http.get('http://doto.work/api/gifts/').success(function (data) {
+    //    $scope.gifts = data;
+    //});
+});
+
+doToApp.controller('addCtrl',function($scope,$http){
     $scope.addGame = function() {
         $http.post( 'http://doto.work/api/todo/links/', $scope.user ).success(function(){
             closeForm();
@@ -63,7 +69,4 @@ doToApp.controller('activitiesCtrl', function ($scope, $http) {
             alert("Link added!");
         });
     }
-    //$http.get('http://doto.work/api/gifts/').success(function (data) {
-    //    $scope.gifts = data;
-    //});
-});
+})
