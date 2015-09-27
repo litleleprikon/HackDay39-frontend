@@ -57,16 +57,16 @@ doToApp.controller('activitiesCtrl', function ($scope, $http) {
 });
 
 doToApp.controller('addCtrl',function($scope,$http){
+    $scope.game={};
+    $scope.link={};
     $scope.addGame = function() {
-        $http.post( 'http://doto.work/api/todo/links/', $scope.user ).success(function(){
+        $http.post( 'http://doto.work/api/todo/links/', $scope.game ).success(function(){
             closeForm();
-            alert("Game added!");
         });
     }
     $scope.addLink = function() {
-        $http.post( 'http://doto.work/api/todo/games/', $scope.user ).success(function(){
+        $http.post( 'http://doto.work/api/todo/games/', $scope.link ).success(function(){
             closeForm();
-            alert("Link added!");
         });
     }
 })

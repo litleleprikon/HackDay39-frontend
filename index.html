@@ -68,16 +68,16 @@
 <div class="add-link-form form" ng-controller="addCtrl">
     <h2>Add link</h2>
     <form action="" ng-controller="mainCtrl" ng-submit="addLink()" >
-        <input type="text" ng-model="user.url" placeholder="URL">
-        <input type="text" ng-model="user.minutes" placeholder="Minutes">
+        <input type="text" ng-model="link.url" placeholder="URL">
+        <input type="text" ng-model="link.minutes" placeholder="Minutes">
         <input type="submit" value="Add">
     </form>
 </div>
 <div class="add-game-form form" ng-controller="addCtrl">
     <h2>Add game</h2>
     <form action="" ng-controller="mainCtrl" ng-submit="addGame()">
-        <input type="text" ng-model="user.name" placeholder="Name">
-        <input type="text" ng-model="user.minutes" placeholder="Minutes">
+        <input type="text" ng-model="game.name" placeholder="Name">
+        <input type="text" ng-model="game.minutes" placeholder="Minutes">
         <input type="submit" value="Add">
     </form>
 </div>
