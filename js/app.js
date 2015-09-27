@@ -40,7 +40,7 @@ doToApp.config(['$routeProvider',
         }
         $scope.logout = function() {
             $http.delete('http://doto.work/api/auth/user/').success (function () {
-                window.location.href='?#/main';
+                document.cookie="";
             });
         }
     });
