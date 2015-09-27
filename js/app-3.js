@@ -61,12 +61,12 @@ doToApp.controller('addCtrl',function($scope,$http){
     
     $scope.link={};
     $scope.addGame = function() {
-        $http.post( 'http://doto.work/api/todo/links/', $scope.game ).success(function(){
+        $http.post( 'http://doto.work/api/todo/games/', $scope.game ).success(function(){
             closeForm();
         });
     }
     $scope.addLink = function() {
-        $http.post( 'http://doto.work/api/todo/games/', $scope.link ).success(function(){
+        $http.post( 'http://doto.work/api/todo/links/', $scope.link ).success(function(){
             closeForm();
         });
     }
