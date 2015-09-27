@@ -2,9 +2,9 @@
 
 /* App Module */
 
-    var doToApp = angular.module('doToApp', [
-      'ngRoute'
-    ]);
+var doToApp = angular.module('doToApp', [
+    'ngRoute'
+]);
 
 doToApp.config(['$routeProvider',
     function($routeProvider) {
@@ -23,27 +23,29 @@ doToApp.config(['$routeProvider',
     }]);
 
 
-    doToApp.controller('mainCtrl',function($scope,$http) {
-        $scope.user={};
-        $scope.login = function() {
-                $http.post( 'http://doto.work/api/auth/', $scope.user ).success(function(){
-                    closeLogin();
-                    window.location.href='?#/activities';
-                }).error(function(){
-                    alert("Incorrect login/password");
-                });
-            }
-        $scope.register = function() {
-            $http.post( 'http://doto.work/api/auth/user/', $scope.user ).success(function(){
-                alert("You've been registered");
-            });
-        }
-        $scope.logout = function() {
-            $http.delete('http://doto.work/api/auth/user/').success (function () {
-                document.cookie="";
-            });
-        }
-    });
+doToApp.controller('mainCtrl',function($scope,$http) {
+    $scope.user={};
+    $scope.login = function() {
+        $http.post( 'http://doto.work/api/auth/', $scope.user ).success(function(){
+            closeForm();
+            window.location.href='?#/activities';
+        }).error(function(){
+            alert("Incorrect login/password");
+        });
+    }
+    $scope.register = function() {
+        $http.post( 'http://doto.work/api/auth/user/', $scope.user ).success(function(){
+            alert("You've been registered");
+        });
+    }
+});
+
+doToApp.controller('logoutCtrl', function($scope,$http){
+    $scope.logout = function() {
+        document.cookie="";
+        window.location.href='?#/main';
+    }
+});
 
 doToApp.controller('activitiesCtrl', function ($scope, $http) {
     $http.get('http://doto.work/api/todo/activities').success(function (data) {
@@ -51,11 +53,13 @@ doToApp.controller('activitiesCtrl', function ($scope, $http) {
     });
     $scope.addGame = function() {
         $http.post( 'http://doto.work/api/todo/links/', $scope.user ).success(function(){
+            closeForm();
             alert("Game added!");
         });
     }
     $scope.addLink = function() {
         $http.post( 'http://doto.work/api/todo/games/', $scope.user ).success(function(){
+            closeForm();
             alert("Link added!");
         });
     }

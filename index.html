@@ -20,68 +20,68 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
-    <div class="fade" onclick="closeForm()"></div>
-    <!-- Navigation -->
-    <nav class="header" role="navigation">
-        <div class="container">
-            <div class="col-md-12">
-                <a href="/" class="logo"><img src="img/logo.png" alt="ToDo"></a>
-                <div class="login-links" ng-hide="document.cookie!=''">
-                    <a href="" onclick="showLogin()" class="login-link">Sign In</a> <span>OR</span> <a href="#register" class="reg-btn">Register</a>
-                </div>
-                <div class="login-links" ng-show="document.cookie!=''" ng-controller="mainCtrl">
-                    <a href="" onclick="logout()" class="reg-btn">Log Out</a>
-                </div>
+<div class="fade" onclick="closeForm()"></div>
+<!-- Navigation -->
+<nav class="header" role="navigation">
+    <div class="container">
+        <div class="col-md-12">
+            <a href="#/main" class="logo"><img src="img/logo.png" alt="ToDo"></a>
+            <div class="login-links" ng-hide="document.cookie!=null">
+                <a href="" onclick="showLogin()" class="login-link">Sign In</a> <span>OR</span> <a href="#/main#register" class="reg-btn">Register</a>
+            </div>
+            <div class="login-links" ng-show="document.cookie!=null" ng-controller="logoutCtrl">
+                <a href="" ng-click="logout()" class="reg-btn">Log Out</a>
             </div>
         </div>
-        <!-- /.container -->
-    </nav>
-
-    <div class="ng-view">
-
     </div>
+    <!-- /.container -->
+</nav>
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
+<div class="ng-view">
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <div class="login-form form">
-        <h2>Sign In</h2>
+</div>
 
-        <form action="" ng-controller="mainCtrl" ng-submit="login()">
-            <input type="text" ng-model="user.username" placeholder="Username">
-            <input type="text" ng-model="user.password" placeholder="Password">
-            <input type="submit" value="Sign In">
-        </form>
-    </div>
-    <div class="add-link-form form">
-        <h2>Add link</h2>
-        <form action="" ng-controller="mainCtrl" ng-submit="addLink()">
-            <input type="hidden" ng-model="user.type" value="url">
-            <input type="text" ng-model="user.url" placeholder="URL">
-            <input type="text" ng-model="user.minutes" placeholder="Minutes">
-            <input type="submit" value="Add">
-        </form>
-    </div>
-    <div class="add-game-form form">
-        <h2>Add game</h2>
-        <form action="" ng-controller="mainCtrl" ng-submit="addGame()">
-            <input type="hidden" ng-model="user.type" value="game">
-            <input type="text" ng-model="user.name" placeholder="Name">
-            <input type="text" ng-model="user.minutes" placeholder="Minutes">
-            <input type="submit" value="Add">
-        </form>
-    </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<!-- jQuery Version 1.11.1 -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<div class="login-form form">
+    <h2>Sign In</h2>
+
+    <form action="" ng-controller="mainCtrl" ng-submit="login()">
+        <input type="text" ng-model="user.username" placeholder="Username">
+        <input type="text" ng-model="user.password" placeholder="Password">
+        <input type="submit" value="Sign In">
+    </form>
+</div>
+<div class="add-link-form form">
+    <h2>Add link</h2>
+    <form action="" ng-controller="mainCtrl" ng-submit="addLink()">
+        <input type="hidden" ng-model="user.type" value="url">
+        <input type="text" ng-model="user.url" placeholder="URL">
+        <input type="text" ng-model="user.minutes" placeholder="Minutes">
+        <input type="submit" value="Add">
+    </form>
+</div>
+<div class="add-game-form form">
+    <h2>Add game</h2>
+    <form action="" ng-controller="mainCtrl" ng-submit="addGame()">
+        <input type="hidden" ng-model="user.type" value="game">
+        <input type="text" ng-model="user.name" placeholder="Name">
+        <input type="text" ng-model="user.minutes" placeholder="Minutes">
+        <input type="submit" value="Add">
+    </form>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </body>
 
 </html>
