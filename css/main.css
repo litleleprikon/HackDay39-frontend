@@ -94,6 +94,12 @@ a.green-btn:hover,a.green-btn:focus {
     .login-links>span {
         display: none;
     }
+    .activity .set, .activity .remains, .gift .key {
+        display: none;
+    }
+    .gifts>.clearfix>.yellow {
+        display: none;
+    }
 }
 .main-footer {
     background: #000;
@@ -265,10 +271,6 @@ a.green-btn:hover,a.green-btn:focus {
     padding-top: 10px;
     line-height: 20px;
 }
-.activity span {
-    text-transform: uppercase;
-    font-size: 10px;
-}
 .gifts .caption {
     font-weight: 100;
     text-transform: uppercase;
@@ -280,9 +282,58 @@ a.green-btn:hover,a.green-btn:focus {
     margin-bottom: 10px;
     margin-left: 5px;
 }
-.gifts .clearfix {
+.gifts>.clearfix {
     margin-bottom: 10px;
 }
 .yellow {
     background: #f4b456;
+}
+.gift-title {
+    background: #3c3c3c;
+    height: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.gift-title>.type-steam {
+    background: #444395;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 30px;
+    width: 60px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-right: 20px;
+    float: left;
+}
+.gift-title>a {
+    color: white;
+    font-size: 16px;
+}
+.gift-title>.key {
+    float: right;
+    background: #99c45a;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+.key>a {
+    color: #fff;
+}
+.gift-description {
+    background: #ccc;
+    color: #222;
+    line-height: 21px;
+    font-size: 14px;
+    padding: 10px 20px;
+    text-transform: none;
+}
+.gift {
+    margin-bottom: 20px;
 }
