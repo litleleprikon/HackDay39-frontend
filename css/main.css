@@ -263,7 +263,7 @@ a.green-btn:hover, a.green-btn:focus {
     float: left;
 }
 
-.activity > .type-url {
+.activity > .type-link {
     background: #444395;
     color: #fff;
     font-size: 14px;
