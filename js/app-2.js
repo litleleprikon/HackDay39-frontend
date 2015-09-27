@@ -58,6 +58,7 @@ doToApp.controller('activitiesCtrl', function ($scope, $http) {
 
 doToApp.controller('addCtrl',function($scope,$http){
     $scope.game={};
+    
     $scope.link={};
     $scope.addGame = function() {
         $http.post( 'http://doto.work/api/todo/links/', $scope.game ).success(function(){
