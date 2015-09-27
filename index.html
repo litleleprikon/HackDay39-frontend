@@ -12,7 +12,9 @@
     <script src="js/angular-route/angular-route.js"></script>
     <script type="application/javascript" src="js/app-1.js"></script>
     <title>DoTo</title>
-
+    <script type="text/javascript">
+        var au=isAuth();
+    </script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -33,10 +35,10 @@
     <div class="container">
         <div class="col-md-12">
             <a href="#/main" class="logo"><img src="img/logo.png" alt="ToDo"></a>
-            <div class="login-links" ng-hide="!isAuth()">
+            <div class="login-links" ng-hide="au">
                 <a href="" onclick="showLogin()" class="login-link">Sign In</a> <span>OR</span> <a href="#/main#register" class="reg-btn">Register</a>
             </div>
-            <div class="login-links" ng-show="!isAuth()" ng-controller="logoutCtrl">
+            <div class="login-links" ng-show="au" ng-controller="logoutCtrl">
                 <a href="" ng-click="logout()" class="reg-btn">Log Out</a>
             </div>
         </div>
