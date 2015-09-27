@@ -40,7 +40,7 @@ doToApp.controller('mainCtrl',function($scope,$http) {
     }
 });
 
-doToApp.controller('logoutCtrl', function($scope){
+doToApp.controller('logoutCtrl', function($scope,$http){
     $scope.logout = function() {
         document.cookie="";
         window.location.href='?#/main';
